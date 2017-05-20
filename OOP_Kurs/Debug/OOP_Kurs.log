@@ -1,0 +1,13 @@
+﻿  MainForm.cpp
+MainForm.cpp(7): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  EditForm.cpp
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(334): error C2065: EditForm: необъявленный идентификатор
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(334): error C2065: formEdit: необъявленный идентификатор
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(334): error C2061: синтаксическая ошибка: идентификатор "EditForm"
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(335): error C2065: formEdit: необъявленный идентификатор
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(335): error C2227: выражение слева от "->ShowDialog" должно указывать на тип класса, структуры или объединения либо на универсальный тип
+  c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(335): note: тип: unknown-type
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(336): error C2065: formEdit: необъявленный идентификатор
+c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(336): error C2227: выражение слева от "->Edit" должно указывать на тип класса, структуры или объединения либо на универсальный тип
+  c:\users\nicks\desktop\учеба\ооп\oop_kurs\oop_kurs\MainForm.h(336): note: тип: unknown-type
+  Создание кода...
