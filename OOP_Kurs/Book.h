@@ -1,8 +1,7 @@
-using namespace System;
-
 #pragma once
-
-
+#include <iostream>
+using namespace System;
+using namespace System::Runtime::Serialization;
 
 enum Genres
 {
@@ -10,13 +9,11 @@ enum Genres
 	Thriller,
 	Novel
 };
+
+[Serializable]
 public ref class Book
 {
 public:
-	Book();
-	
-	void input(int _pages, String^ _author, String^ _name, String^ genre);
-
 	property int ID
 	{
 		int get();
@@ -47,6 +44,13 @@ public:
 		void set(String^ value);
 	}
 
+	Book();
+	Book(int id);
+
+	void Input(int _pages, String^ _author, String^ _name, String^ genre);
+	void Input(Book^ book);
+	static void AddID(int value);
+
 private:
 	static int currentID = 1;
 
@@ -55,9 +59,5 @@ private:
 	String^ _author;
 	String^ _name;
 	Genres _genre;
-
-	String^ FANTASTIC = "Фантастика";
-	String^ NOVEL = "Роман";
-	String^ THRILLER = "Триллер";
 };
 

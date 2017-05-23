@@ -126,35 +126,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data.Linq">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\Devart\dotConnect\5.0\Net2\Common\Devart.Data.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AudioBook.cpp" />
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="BookEditForm.cpp" />
     <ClCompile Include="ElectronicBook.cpp" />
     <ClCompile Include="HandwrittenBook.cpp" />
     <ClCompile Include="MainForm.cpp" />
-    <ClCompile Include="EditForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioBook.h" />
     <ClInclude Include="Book.h" />
+    <ClInclude Include="BookEditForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="ElectronicBook.h" />
     <ClInclude Include="HandwrittenBook.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="EditForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EditForm.resx">
-      <DependentUpon>EditForm.h</DependentUpon>
+    <EmbeddedResource Include="BookEditForm.resx">
+      <DependentUpon>BookEditForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>

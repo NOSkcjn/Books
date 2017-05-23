@@ -1,12 +1,14 @@
 #include "Book.h"
-//using namespace System;
-
-
-
+#include "Constants.h"
 
 Book::Book()
 {
 	this->_ID = currentID++;
+}
+
+Book::Book(int id)
+{
+	this->_ID = id;
 }
 
 //ID
@@ -59,25 +61,27 @@ String^ Book::Genre::get()
 	switch (_genre)
 	{
 		case Genres::Fantastic:
-			return FANTASTIC;
+			return gcnew String(FANTASTIC);
 		case Genres::Novel:
-			return NOVEL;
+			return gcnew String(NOVEL);
 		case Genres::Thriller:
-			return THRILLER;
+			return gcnew String(THRILLER);
+		default:
+			return gcnew String(NOVEL);
 	}
 }
 
 void Book::Genre::set(String^ value)
 {
-	if (value == FANTASTIC)
+	if (value == gcnew String(FANTASTIC))
 		_genre = Genres::Fantastic;
-	else if(value == NOVEL)
-		_genre = Genres::Novel;
-	else if (value == THRILLER)
+	else if (value == gcnew String(THRILLER))
 		_genre = Genres::Thriller;
+	else
+		_genre = Genres::Novel;
 }
 
-void Book::input(int _pages, String^ _author, String^ _name, String^ genre)
+void Book::Input(int _pages, String^ _author, String^ _name, String^ genre)
 {
 	this->_pages = _pages;
 	this->_author = _author;
@@ -85,18 +89,15 @@ void Book::input(int _pages, String^ _author, String^ _name, String^ genre)
 	this->Genre = genre;
 }
 
-/*property String^ Book::Author
+void Book::Input(Book^ inputBook)
 {
-	String^ set(String^ value)
-	{
-		author = value
-	}
-	void get
-	{
-		return author;
-	}
-}*/
+	this->_pages = inputBook->Pages;
+	this->_author = inputBook->Author;
+	this->_name = inputBook->Name;
+	this->Genre = inputBook->Genre;
+}
 
-/*String ^ Book::ToString() {
-	return name;
-}*/
+void Book::AddID(int value)
+{
+	currentID += value;
+}
